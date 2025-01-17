@@ -11,7 +11,15 @@ function handle() {
 let button = document.querySelector('.button');
 button.addEventListener('click', handle);
 
-let a = document.querySelector('container1');
-
-let banner = document.querySelector('.banner');
-banner.height = a.height;   
+let links = document.querySelectorAll('.btn');
+    let targetID;
+    links.forEach(function(e) {
+        e.addEventListener('click', function (event) {
+            event.preventDefault();
+            targetID = e.getAttribute('href');
+            document.querySelector(targetID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        })
+    })
