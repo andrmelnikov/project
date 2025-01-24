@@ -404,22 +404,22 @@
 .img4{
     max-width: 2400px;
     height: 80vh;
-    background-image: url(Картинки/0.jpg);
+    background-image: url(0.jpg);
     background-size: cover;
     background-position: center;
     filter: blur(10px);
 }
 
 .img41{
-    background-image: url(Картинки/1.jpg);
+    background-image: url(1.jpg);
 }
 
 .img42{
-    background-image: url(Картинки/2.jpg);
+    background-image: url(2.jpg);
 }
 
 .img43{
-    background-image: url(Картинки/3.jpg);
+    background-image: url(3.jpg);
 }
 
 .section5{
