@@ -12,14 +12,23 @@ let button = document.querySelector('.button');
 button.addEventListener('click', handle);
 
 let links = document.querySelectorAll('.btn');
-    let targetID;
-    links.forEach(function(e) {
-        e.addEventListener('click', function (event) {
-            event.preventDefault();
-            targetID = e.getAttribute('href');
-            document.querySelector(targetID).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
+let targetID;
+links.forEach(function(e) {
+    e.addEventListener('click', function (event) {
+        event.preventDefault();
+        targetID = e.getAttribute('href');
+        document.querySelector(targetID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         })
     })
+})
+let up = document.querySelector('.return');
+up.addEventListener('click', function (event) {
+    event.preventDefault();
+    targetID = up.getAttribute('href');
+    document.querySelector(targetID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})

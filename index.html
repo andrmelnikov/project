@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 </head>
 <body>
     <main>
-        <section class="section1">
+        <section class="section1" id="main">
             <div class="section1__banner banner"></div>
             <div class="section1__container1 container1">
                 <h1 class="container1__title1 title1">Лучшая пекарня в Москве</h1>
@@ -75,14 +76,40 @@
             
         </section>
         <section class="form1" id="orders">
-            <form action="" class="form">
-                <h2 class="title">Закажите сейчас</h2>
-                <input type="text" name="name" id="" placeholder="Введите свой заказ" class="nm get">
-                <input type="tel" name="password" id="" placeholder="Введите номер телефона" class="pw get">
-                <input type="button" value="Заказать" class="button">
-            </form>
+            <div class="section5">
+                <div class="slider">
+                    <div><div class="img4"></div></div>
+                    <div><div class="img4 img41"></div></div>
+                    <div><div class="img4 img42"></div></div>
+                    <div><div class="img4 img43"></div></div>
+                </div>
+                <form action="" class="form">
+                    <h2 class="title">Закажите сейчас</h2>
+                    <input type="text" name="name" id="" placeholder="Введите свой заказ" class="nm get">
+                    <input type="tel" name="password" id="" placeholder="Введите номер телефона" class="pw get">
+                    <input type="button" value="Заказать" class="button">
+                </form>
+            </div>
+            <a href="#main" class="return">Вернуться наверх</a>
         </section>
     </main>
 <script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                pagerCustom: '.slider-nav',
+                infiniteLoop: true,
+                hideControlOnEnd: true,
+                // captions: true,
+                // nextText: '',
+                // prevText: '',
+                easing: 'jswing',
+                auto: true,
+                randomStart: true,
+            });
+        });
+    </script>
 </body>
 </html>

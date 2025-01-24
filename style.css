@@ -355,12 +355,15 @@
 
 .form{
     height: 80vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .button{
@@ -369,6 +372,14 @@
     border-radius: 30px;
     border: none;
     font-size: 30px;
+    background: #FCD980;
+    transition: .3s;
+}
+.button:hover{
+    transform: scale(1.05);
+}
+.button:active{
+    transform: scale(0.98);
 }
 
 .get{
@@ -376,10 +387,64 @@
     font-size: 30px;
     border-radius: 20px;
     padding: 5px;
+    transition: .4s;
+    border: 3px #FCD980 solid;
 }
 
 .title{
     font-size: 5vh;
+    color: #fff;
+}
+
+.bx-wrapper {
+    width: 100%;
+    height: 80vh;
+}
+
+.img4{
+    max-width: 2400px;
+    height: 80vh;
+    background-image: url(Картинки/0.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+}
+
+.img41{
+    background-image: url(Картинки/1.jpg);
+}
+
+.img42{
+    background-image: url(Картинки/2.jpg);
+}
+
+.img43{
+    background-image: url(Картинки/3.jpg);
+}
+
+.section5{
+    position: relative;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    opacity: 0;
+}
+.form1{
+    position: relative;
+}
+
+.return{
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 5vh;
+}
+
+.return::after{
+    content: '↑';
+    margin-left: 15px;
 }
 /* 576px и меньше: Мобильные устройства.
 577px – 768px: Портретная ориентация планшетов.
